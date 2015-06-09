@@ -1,0 +1,16 @@
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* line 7, css/bootstrap.min.scss */
+body {
+  margin: 0;
+  font-family: Lato, sans-serif;
+	font-weight: 400;
+	display:none;
+	background: black;		
+	padding:0;
+	margin:0;
+}
