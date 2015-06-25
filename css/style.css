@@ -1,16 +1,47 @@
-html {
-  font-family: sans-serif;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-}
+html { font-size: 100%; /* 1 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+-ms-text-size-adjust: 100%; /* 2 */ }
 
-/* line 7, css/bootstrap.min.scss */
-body {
-  margin: 0;
-  font-family: Lato, sans-serif;
-	font-weight: 400;
-	display:none;
-	background: black;		
-	padding:0;
-	margin:0;
-}
+html, button, input, select, textarea { font-family: 'Lato', sans-serif; }
+
+body { margin: 0; font-family: 'Lato', sans-serif; }
+
+a:focus { outline: thin dotted; }
+/* * Improves readability when focused and also mouse hovered in all browsers. */
+a:active, a:hover { outline: 0; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary { display: block; }
+
+/* ==========================================================================
+Typography
+========================================================================== */
+/* * Addresses font sizes and margins set differently in IE 6/7.
+* Addresses font sizes within `section` and `article` in Firefox 4+, Safari 5, * and Chrome. */
+
+h1 { font-size: 2em; margin: 0.67em 0; }
+h2 { font-size: 1.5em; margin: 0.83em 0; }
+h3 { font-size: 1.17em; margin: 1em 0; }
+h4 { font-size: 1em; margin: 1.33em 0; }
+h5 { font-size: 0.83em; margin: 1.67em 0; }
+h6 { font-size: 0.75em; margin: 2.33em 0; }
+
+
+/* ==========================================================================
+Headings
+========================================================================== */
+
+.hero h1 { font-size: 60px; font-weight: 100; color: #fff; letter-spacing: -1px; margin: 100px 0 20px 0; }
+
+
+/* ==========================================================================
+Custom Styles
+========================================================================== */
+.hero { background: url('../img/hero.jpg') no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; padding: 65px 0; height: auto; }
+.pull { display: none; }
+p { font-weight: 300; }
+.navigation { background-color: #1F1F1F; }
+.nav-last { margin-bottom: 50px; }
+nav ul { list-style: none; padding: 0; }
+nav ul li a { color: rgba(255, 255, 255, 0.6); padding: 20px; display: block; border-bottom: 1px dotted rgba(255, 255, 255, 0.2); transition: all 0.5s ease; -moz-transition: all 0.5s ease; -webkit-transition: all 0.5s ease; -o-transition: all 0.5s ease; padding-left: 0; position: relative; }
+nav ul li a:hover, nav ul li a:focus { color: rgba(255, 255, 255, 1); text-decoration: none; }
+.indicator { position: absolute; right: 0 !important; }
