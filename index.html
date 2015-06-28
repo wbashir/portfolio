@@ -10,6 +10,7 @@
   <!-- Bootstrap -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
   <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/flexslider.css?v=1.2" type="text/css">
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/mediaQueries.css" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
@@ -26,10 +27,10 @@
         <div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2">
           <nav class="pull">
             <ul class="top-nav">
-              <li><a href="#getstarted">Get Started <span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
-              <li><a href="#media">Media <span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
-              <li><a href="#features">Features <span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
-              <li class="nav-last"><a href="#design">Design <span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
+              <li><a href="#home">Home <span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
+              <li><a href="#about">About <span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
+              <li><a href="#samples">Samples <span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
+              <li class="nav-last"><a href="#contact">Contact <span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
             </ul>
           </nav>
         </div>
@@ -51,41 +52,84 @@
       </div>
       <div class="row">
         <div class="col-md-2 col-md-offset-5 text-center">
-          <a href="http://player.vimeo.com/video/87701971?title=0&amp;byline=0&amp;portrait=0&amp;color=1883ad&amp;autoplay=1" class="hero-play-btn various fancybox.iframe">Play Button</a>
+          <a href="http://player.vimeo.com/video/77404995?title=0&amp;byline=0&amp;portrait=0&amp;color=1883ad&amp;autoplay=1" class="hero-play-btn various fancybox.iframe">Play Button</a>
         </div>
       </div>
       <div class="row">
         <div class="col-md-6 col-md-offset-3 text-center">
-          <a href="" class="get-started-btn">Get Started</a>
+          <a href="" class="get-started-btn">More Please</a>
         </div>
       </div>
     </div>
   </section>
+  <section class="flex-container">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="flexslider">
+              <ul class="slides">
+                <li>
+                  <div class="flex-twitter-icon"></div>
+                  <h2 class="twitter-post-username">
+                  <a href="#">AOS New York @aod</a> <span>/ 35 min</span>
+                  </h2>
+                  <p class="twitter-post">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut tellus ac nulla semper rhoncus. Nullam a odio porttitor, dictum turpis vitae, pretium ante amet.</p>
+                </li>
+                <li>
+                  <div class="flex-twitter-icon"></div>
+                  <h2 class="twitter-post-username">
+                  <a href="#">AOS New York @aod</a> <span>/ 35 min</span>
+                  </h2>
+                  <p class="twitter-post">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut tellus ac nulla semper rhoncus. </p>
+                </li>
+                <li>
+                  <div class="flex-twitter-icon"></div>
+                  <h2 class="twitter-post-username">
+                  <a href="#">AOS New York @aod</a> <span>/ 35 min</span>
+                  </h2>
+                  <p class="twitter-post">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut tellus ac nulla semper rhoncus. Nullam a odio porttitor.</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  <section class="sign_up" id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-md-offset-3 sign-up">
+            <h2 class="logo-header">Don't be shy, Say hello!</h2>
+            <form name="signup-form">
+              <input class="signup-input" type="email" name="email_address" value="" placeholder="enter your email..." title="Please enter a valid email address." required>
+              <button type="submit" class="submit-btn">GO</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
   <footer>
     <div class="container">
-      <div class="row">
-        <div class="col-md-4">
-          <p>Nam mi enim, auctor non ultricies a, fringilla eu risus. </p>
-        </div>
-        <div class="col-md-3">
-          <p>aliquam dolor. Cum sociis natoque penatibus et magnis</p>
-        </div>
-        <div class="col-md-2 col-md-offset-3">
-          <ul class="footer-nav">
-            <li><a href="#">Get Started Tutorial</a></li>
-            <li><a href="#">Introduction Video</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12 text-center">
-          <a href="#" class="badge-btn">Badge Button</a>
-          <p class="footer-credit">Design by
-            <a href="http://www.blazrobar.com">Blaz Robar</a> | Developed by <a href="http://www.peterfinlan.com">Peter Finlan</a>
-          </p>
+        <div class="row">
+          <div class="col-md-4 footer-leftcol">
+            <p><span class="bold-16p">AOD New York</span><br>
+            2250 Lexington Avenue<br>
+            Seattle, WA 10035 - <a href="#">warsame@domain.com</a>
+            </p>
+          </div>
+          <div class="col-md-4 footer-midcol">
+            <ul>
+              <li><a href="#" class="twitter-icon">Twitter</a></li>
+              <li><a href="#" class="facebook-icon">Facebook</a></li>
+              <li><a href="#" class="pintrest-icon">Pintrest</a></li>
+            </ul>
+            <div class="clearfix"></div>
+          </div>
+          <div class="col-md-4 footer-rightcol">
+            <p>Bixin <a href="#">Software</a></p>
+          </div>
         </div>
       </div>
-    </div>
   </footer>
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>

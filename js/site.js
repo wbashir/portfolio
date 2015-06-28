@@ -4,27 +4,15 @@ $(window).load(function() {
     $('.pull').slideToggle();
   });
 });
-// first-flexslider
+//FLEXSLIDER
 $(window).load(function() {
-  $('#firstSlider').flexslider({
+  $('.flexslider').flexslider({
     animation: "slide",
     directionNav: false,
     controlNav: true,
-    touch: false,
-    start: function() {
-      $.waypoints('refresh');
-    }
   });
 });
-// second-flexslider
-$(window).load(function() {
-  $('#secondSlider').flexslider({
-    animation: "slide",
-    directionNav: false,
-    controlNav: false,
-    touch: false,
-  });
-});
+
 $('.prev, .next').on('click', function() {
   var href = $(this).attr('href');
   $('#secondSlider').flexslider(href)
