@@ -1,3 +1,4 @@
+
 // navigation slide-in
 $(window).load(function() {
   $('.nav_slide_button').click(function() {
@@ -68,5 +69,37 @@ $(document).ready(function() {
     closeClick: false,
     openEffect: 'none',
     closeEffect: 'none'
+  });
+});
+
+$(document).ready(function(){
+  $(".signup-form").submit(function(e){
+
+    var formData = $(this).serialize();
+    var data = {
+      "action": "test"
+    };
+    data = $(this).serialize() + "&" + $.param(data);
+    
+      $.ajax({
+        type: "POST",
+        dataType: "json",
+        url: "server.php", //Relative or absolute path to response.php file
+        data: data,
+        success: function(data) {
+          $(".the-return").html(
+            "Favorite beverage: " + data["email_address"]
+          );
+          console.log(data);
+          alert("Form submitted successfully.\nReturned json:\n" + JSON.stringify(data));
+        },
+        error: function(XMLHttpRequest, textStatus, errorThrown){
+            console.log(XMLHttpRequest);
+            console.log(textStatus);
+            console.log(errorThrown);
+
+        }
+      });
+    return false;
   });
 });
