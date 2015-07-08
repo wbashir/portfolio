@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-	
+	<link rel="stylesheet" href="https://cdn.plyr.io/1.1.13/plyr.css">
+
 </head>
 <body>
  <section class="navigation">
@@ -23,21 +24,50 @@
   </section>
 	<section class="features" id="features">
         <div class="container">
+        <div class="row">
+          <div class="col-md-9 features-lefcol col-md-offset-2 wp2  text-center">
+           <h1>See me sing!!</h1>
+              <p class="margin-bottom">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              <div class="player">
+                  <video poster="https://cdn.selz.com/plyr/1.0/poster.jpg" controls crossorigin>
+                      <!-- Video files -->
+                      <source src="https://cdn.selz.com/plyr/1.0/movie.mp4" type="video/mp4">
+                      <source src="https://cdn.selz.com/plyr/1.0/movie.webm" type="video/webm">
+
+                      <!-- Text track file -->
+                      <track kind="captions" label="English captions" src="https://cdn.selz.com/plyr/1.0/movie_captions_en.vtt" srclang="en" default>
+
+                      <!-- Fallback for browsers that don't support the <video> element -->
+                      <a href="https://cdn.selz.com/plyr/1.0/movie.mp4">Download</a>
+                  </video>
+              </div>
+          </div>
+        </div>
+        <br>
           <div class="row">
-            <div class="col-md-6 features-leftcol wp2">
-              <h1>So Dreamy</h1>
-              <p class="margin-bottom">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-              <h1>Apple Store</h1>
-              <p>Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            </div>
-            <div class="col-md-6 features-rightcol wp3">
-              <h1>More Buzz Words</h1>
-              <p class="margin-bottom">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-              <h1>Extra Startup Juice</h1>
-              <p>Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <div class="col-md-7 features-leftcol wp2 col-md-offset-3 text-center">
+              <h1>Hear me shout!!</h1>
+              <p class="margin-bottom">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              <div class="player">
+                <audio controls>
+                    <!-- Audio files -->
+                    <source src="https://cdn.selz.com/plyr/1.0/logistics-96-sample.mp3" type="audio/mp3">
+                    <source src="https://cdn.selz.com/plyr/1.0/logistics-96-sample.ogg" type="audio/ogg">
+
+                    <!-- Fallback for browsers that don't support the <audio> element -->
+                    <a href="https://cdn.selz.com/plyr/1.0/logistics-96-sample.mp3">Download</a>
+                </audio>
+              </div>
+              
             </div>
           </div>
-          
+        </div>
+      </section>
+      <section class="features" id="features">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2 text-center">
+            <div id="chart"></div>
+          </div>
         </div>
       </section>
 </body>
@@ -52,5 +82,21 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/1.5.5/jquery.smooth-scroll.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.5/waypoints.js"></script>
+  <script src="https://cdn.plyr.io/1.1.13/plyr.js"></script>
+
+  <script>
+    (function(d,p){
+        var a=new XMLHttpRequest(),
+            b=d.body;
+        a.open("GET",p,!0);
+        a.send();
+        a.onload=function(){
+            var c=d.createElement("div");
+            c.style.display="none";
+            c.innerHTML=a.responseText;
+            b.insertBefore(c,b.childNodes[0])
+        }
+    })(document,"https://cdn.plyr.io/1.1.13/sprite.svg");
+</script>
   <script type='text/javascript' src="js/site.js"></script>
 </html>

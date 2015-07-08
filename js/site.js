@@ -102,4 +102,8 @@ $(document).ready(function(){
       });
     return false;
   });
+
+
+  //Plyr set up (video and audio)
+  plyr.setup()
 });
