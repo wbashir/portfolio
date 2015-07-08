@@ -70,3 +70,9 @@ footer p { font-size: 13px; margin: 0; }
 .twitter-icon { background: url(../img/twitter-icon.png); height: 34px; width: 35px; display: block; text-indent: -9999px; }
 .facebook-icon { background: url(../img/facebook-icon.png); height: 34px; width: 35px; display: block; text-indent: -9999px; }
 .pintrest-icon { background: url(../img/pintrest-icon.png); height: 34px; width: 35px; display: block; text-indent: -9999px; }
+.feature-text { padding: 0px 20px 40px 40px; font-style: italic; color: #7a8387; font-size: 16px; }.testimonials { background: #5b6869 url('../img/tBG01.jpg') no-repeat left center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; padding: 130px 0; }
+.features { padding: 70px 0; }
+.features p { color: #7a8387; font-size: 16px; word-spacing: 2px; line-height: 30px; }
+.features-leftcol { border-right: 1px solid rgba(208, 217, 226, 0.4); padding-right: 60px; }
+.features-rightcol { padding-left: 60px; }
+.margin-bottom { margin-bottom: 70px; }
