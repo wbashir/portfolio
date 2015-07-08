@@ -77,7 +77,7 @@ $(document).ready(function(){
 
     var formData = $(this).serialize();
     var data = {
-      "action": "test"
+      "action": "store_emails"
     };
     data = $(this).serialize() + "&" + $.param(data);
     
@@ -87,11 +87,13 @@ $(document).ready(function(){
         url: "server.php", //Relative or absolute path to response.php file
         data: data,
         success: function(data) {
-          $(".the-return").html(
-            "Favorite beverage: " + data["email_address"]
-          );
-          console.log(data);
-          alert("Form submitted successfully.\nReturned json:\n" + JSON.stringify(data));
+          $('input[type=email]').val('');
+          // create the notification
+            jQuery.notifyBar({
+            html: "Thank you " + data['email_address'] + " for subscribing. We will not spam!",
+            delay: 2000,
+            animationSpeed: "normal"
+          }); 
         },
         error: function(XMLHttpRequest, textStatus, errorThrown){
             console.log(XMLHttpRequest);
@@ -103,7 +105,4 @@ $(document).ready(function(){
     return false;
   });
 
-
-  //Plyr set up (video and audio)
-  plyr.setup()
 });

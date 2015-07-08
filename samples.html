@@ -34,8 +34,7 @@
                       <source src="https://cdn.selz.com/plyr/1.0/movie.mp4" type="video/mp4">
                       <source src="https://cdn.selz.com/plyr/1.0/movie.webm" type="video/webm">
 
-                      <!-- Text track file -->
-                      <track kind="captions" label="English captions" src="https://cdn.selz.com/plyr/1.0/movie_captions_en.vtt" srclang="en" default>
+                     
 
                       <!-- Fallback for browsers that don't support the <video> element -->
                       <a href="https://cdn.selz.com/plyr/1.0/movie.mp4">Download</a>
@@ -64,9 +63,14 @@
         </div>
       </section>
       <section class="features" id="features">
-        <div class="row">
-          <div class="col-md-8 col-md-offset-2 text-center">
-            <div id="chart"></div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 features-leftcol wp2">
+               <div id="barChart"></div>
+            </div>
+            <div class="col-md-6 features-rightcol wp3">
+               <div id="lineGraph"></div>
+            </div>
           </div>
         </div>
       </section>
@@ -99,4 +103,9 @@
     })(document,"https://cdn.plyr.io/1.1.13/sprite.svg");
 </script>
   <script type='text/javascript' src="js/site.js"></script>
+  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+  <script type='text/javascript' src="js/chart.js"></script>
+
+  <script>plyr.setup();</script>
+
 </html>
