@@ -76,3 +76,4 @@ footer p { font-size: 13px; margin: 0; }
 .features-leftcol { border-right: 1px solid rgba(208, 217, 226, 0.4); padding-right: 60px; }
 .features-rightcol { padding-left: 60px; }
 .margin-bottom { margin-bottom: 70px; }
+canvas{background-color:rebeccapurple; display: block;margin: auto;border: 1px solid black;}
