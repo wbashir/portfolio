@@ -80,6 +80,18 @@
             <h4> Stock Price Quote</h4>
             <div id="divMain"></div>
           </div>
+          <div>
+          <br/>
+          <div class="demo">
+            <div class="row">
+              <p>Display Quotes Async!</p>
+              <input size="10" value="GOOG" id="lsymbol">
+              <input onclick="showStockQuote()" type="button" value="Get Quote">
+                <br>
+                <div id="lquote">Quote: "The average man is a conformist, accepting miseries and disasters with the stoicism of a cow standing in the rain." -Colin Wilson</div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 </body>
@@ -109,6 +121,18 @@
             b.insertBefore(c,b.childNodes[0])
         }
     })(document,"https://cdn.plyr.io/1.1.13/sprite.svg");
+</script>
+<script src="http://magicspatula.com/stock/quotes.js"></script>
+<script>
+  // Callback function for when the stock quote is received.
+  gotStock = function(resp) {
+        $('#lquote').html(resp);
+  };
+  showStockQuote = function() {
+    getlivestockquote(
+      'GOOG',  // Stock symbol.
+      'gotStock');  // The name of the callback function
+  };
 </script>
   <script type='text/javascript' src="js/site.js"></script>
   <script type="text/javascript" src="https://www.google.com/jsapi"></script>

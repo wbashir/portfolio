@@ -1,10 +1,10 @@
-
 // navigation slide-in
 $(window).load(function() {
   $('.nav_slide_button').click(function() {
     $('.pull').slideToggle();
   });
 });
+
 //FLEXSLIDER
 $(window).load(function() {
   $('.flexslider').flexslider({
@@ -15,11 +15,11 @@ $(window).load(function() {
 });
 
 $('.prev, .next').on('click', function() {
-  var href = $(this).attr('href');
-  $('#secondSlider').flexslider(href)
-  return false;
-})
-// waypoints
+    var href = $(this).attr('href');
+    $('#secondSlider').flexslider(href)
+    return false;
+  })
+  // waypoints
 $(document).ready(function() {
 
   $('.wp1').waypoint(function() {
@@ -70,38 +70,56 @@ $(document).ready(function() {
     openEffect: 'none',
     closeEffect: 'none'
   });
+  $("#gameButton").on('click', function() {
+       $.fancybox({
+            'content' : $("#playTetris")
+        });
+ 
+  })
+    //  $("#tetrisCanvas").fancybox({
+    //   maxWidth: 800,
+    //   maxHeight: 450,
+    //   fitToView: false,
+    //   width: '70%',
+    //   height: '70%',
+    //   autoSize: false,
+    //   closeClick: false,
+    //   openEffect: 'none',
+    //   closeEffect: 'none'
+    // });
+
 });
 
-$(document).ready(function(){
-  $(".signup-form").submit(function(e){
+$(document).ready(function() {
+  $(".signup-form").submit(function(e) {
 
     var formData = $(this).serialize();
     var data = {
       "action": "store_emails"
     };
     data = $(this).serialize() + "&" + $.param(data);
-    
-      $.ajax({
-        type: "POST",
-        dataType: "json",
-        url: "server.php", //Relative or absolute path to response.php file
-        data: data,
-        success: function(data) {
-          $('input[type=email]').val('');
-          // create the notification
-            jQuery.notifyBar({
-            html: "Thank you " + data['email_address'] + " for subscribing. We will not spam!",
-            delay: 2000,
-            animationSpeed: "normal"
-          }); 
-        },
-        error: function(XMLHttpRequest, textStatus, errorThrown){
-            console.log(XMLHttpRequest);
-            console.log(textStatus);
-            console.log(errorThrown);
 
-        }
-      });
+    $.ajax({
+      type: "POST",
+      dataType: "json",
+      url: "server.php", //Relative or absolute path to response.php file
+      data: data,
+      success: function(data) {
+        $('input[type=email]').val('');
+        // create the notification
+        jQuery.notifyBar({
+          html: "Thank you " + data['email_address'] + " for subscribing. We will not spam!",
+          delay: 2000,
+          animationSpeed: "normal"
+        });
+      },
+      error: function(XMLHttpRequest, textStatus, errorThrown) {
+        console.log(XMLHttpRequest);
+        console.log(textStatus);
+        console.log(errorThrown);
+
+      }
+    });
     return false;
   });
 

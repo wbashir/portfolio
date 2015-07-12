@@ -79,7 +79,8 @@ function Stock(exchange, symbol, priceLast)
 
 			var responseAsArray = JSON.parse(responseAsString);
 			var responseAsObject = responseAsArray[0];
-	
+			console.log(responseAsObject);
+			
 			this.priceLast = responseAsObject["l"]; // "latest"
 		}
 		catch(e)
@@ -105,7 +106,6 @@ function Stock(exchange, symbol, priceLast)
 
 			var responseAsArray = JSON.parse(responseAsString);
 			var responseAsObject = responseAsArray.list.resources[0].resource;
-	
 			this.priceLast = parseFloat(responseAsObject.fields.price);
 
 		}
